@@ -12,6 +12,7 @@
 
 // Your code here...
 if(document.getElementById("hardPaywallModal")) {
+	
     document.body.style.overflow = "visible";
     document.getElementsByClassName("modal-backdrop")[0].remove();
     document.getElementById("hardPaywallModal").remove();
