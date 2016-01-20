@@ -14,5 +14,5 @@ var bh = {};
 bh.elements = document.getElementsByClassName("im_dialog_unread");
 
 for(var i in bh.elements) {
-  i.style.visibility = "hidden";
+  bh.elements[i].style.visibility = "hidden";
 }
