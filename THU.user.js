@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Telegram Hide Unread
 // @namespace    https://github.com/blackhydrogen/tms
-// @version      6
+// @version      7
 // @description  Hides the unread icon (blue dot).
 // @author       BH
 // @match        https://web.telegram.org/*
