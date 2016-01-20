@@ -10,5 +10,5 @@
 /* jshint -W097 */
 'use strict';
 
-document.styleSheets[0].addRule(".im_dialog_unread", "{ visibility: hidden }");
-document.styleSheets[0].addRule(".icon-message-status", "{ visibility: hidden }");
+document.styleSheets[0].addRule(".im_dialog_unread", "visibility: hidden");
+document.styleSheets[0].addRule(".icon-message-status", "visibility: hidden");
