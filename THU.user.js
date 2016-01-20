@@ -9,16 +9,6 @@
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
-var bh = {};
 
-bh.counter = 0;
-bh.go = function() {
-    bh.counter++;
-    $(".im_dialog_unread").css("visibility", "hidden");
-    
-    if(bh.counter != 20) {
-        setTimeout(bh.go, 250);
-    }
-};
-
-setTimeout(bh.go, 250);
+document.styleSheets[0].addRule(".im_dialog_unread", "visibility:hidden");
+document.styleSheets[0].addRule(".icon-message-status", "visibility:hidden");
