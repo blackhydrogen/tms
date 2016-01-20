@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Telegram Hide Unread
 // @namespace    https://github.com/blackhydrogen/tms
-// @version      1
+// @version      2
 // @description  Hides the unread icon (blue dot).
 // @author       BH
 // @match        https://web.telegram.org/*
@@ -9,5 +9,10 @@
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
+var bh = {};
 
-$(".im_dialog_unread").css("visibility", "hidden");
+bh.elements = document.getElementsByClassName("im_dialog_unread");
+
+for(var i in bh.elements) {
+  i.style.visibility = "hidden";
+}
