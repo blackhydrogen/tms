@@ -11,8 +11,14 @@
 'use strict';
 var bh = {};
 
-bh.elements = document.getElementsByClassName("im_dialog_unread");
+bh.counter = 0;
+bh.go = function() {
+    bh.counter++;
+    $(".im_dialog_unread").css("visibility", "hidden");
+    
+    if(bh.counter != 20) {
+        setTimeout(bh.go, 250);
+    }
+};
 
-for(var i = 0; i < bh.elements.length; i++) {
-  bh.elements[i].style.visibility = "hidden";
-}
+setTimeout(bh.go, 250);
