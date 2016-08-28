@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         STReader
 // @namespace    https://github.com/blackhydrogen/tms
-// @version      3
+// @version      4
 // @description  Allows you to read Straits Times articles anytime.
 // @author       BH
 // @match        http://www.straitstimes.com/*
@@ -11,7 +11,7 @@
 'use strict';
 
 function bh_go() {
-	console.log("Executing");
+	console.log("Executing Tampermonkey Script");
 	document.body.style.overflow = "visible";
 	if(document.getElementById("hardPaywallModal")) {
 		document.getElementById("hardPaywallModal").remove();
