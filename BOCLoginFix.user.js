@@ -1,21 +1,25 @@
 // ==UserScript==
 // @name         BOCLoginFix
 // @namespace    https://github.com/blackhydrogen/tms
-// @version      2
+// @version      3
 // @description  Fixes Bank of China Personal Online Banking's faulty tab-indexes.
 // @author       BH
 // @match        https://ap.ebs.bankofchina.com/login_sin.html*
-// @require      http://code.jquery.com/jquery-3.2.1.slim.min.js
 // @grant        none
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
 
 function bh_go() {
-	console.log("Executing Tampermonkey Script");
-	$("#SecEditBox").attr("tabIndex", "2");
-	$("#SMSBox").attr("tabIndex", "3");
-	$("#EtokenBoxOtp").attr("tabIndex", "3");
+    console.log("Trying to execute tampermonkey script");
+    if(!document.getElementById("SecEditBox")) {
+        console.log("Tampermonkey script failed to execute.");
+        return;
+    }
+	document.getElementById("SecEditBox").setAttribute("tabIndex", "2");
+	document.getElementById("SMSBox").setAttribute("tabIndex", "3");
+	document.getElementById("EtokenBoxOtp").setAttribute("tabIndex", "3");
+    console.log("Tampermonkey script executed successfully.");
 }
 
 bh_go();
