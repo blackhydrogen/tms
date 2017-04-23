@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         STReader
 // @namespace    https://github.com/blackhydrogen/tms
-// @version      5
+// @version      6
 // @description  Allows you to read Straits Times articles anytime.
 // @author       BH
 // @match        http://www.straitstimes.com/*
@@ -14,7 +14,7 @@
 function bh_go() {
 	console.log("Executing Tampermonkey Script");
 
-    if(document.getElementsByClassName("field-name-body").length == 1) {
+    if(document.getElementsByClassName("field-name-body").length > 0) {
         var e = document.createElement("span");
         e.className = "field-name-body";
         document.head.appendChild(e);
