@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         GoAwayFunoff
 // @namespace    https://github.com/blackhydrogen/tms
-// @version      1
+// @version      2
 // @description  Removes annoying 9gag funoff promo.
 // @author       BH
-// @match        http://9gag.com/*
+// @match        https://9gag.com/*
 // @grant        none
 // ==/UserScript==
 /* jshint -W097 */
